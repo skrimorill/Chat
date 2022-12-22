@@ -9,6 +9,6 @@ export default class UserName {
   }
 
   get() {
-    return this.name
+    return this.name;
   }
 }

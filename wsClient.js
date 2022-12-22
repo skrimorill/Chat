@@ -6,23 +6,23 @@ export default class WSClient {
 
   connect() {
     return new Promise((resolve) => {
-      this.socket = new WebSocket(this.url)
-      this.socket.addEventListener('open', resolve)
+      this.socket = new WebSocket(this.url);
+      this.socket.addEventListener('open', resolve);
       this.socket.addEventListener('message', (event) => {
-        this.onMessage(JSON.parse(event.data))
-      })
-    })
+        this.onMessage(JSON.parse(event.data));
+      });
+    });
   }
 
   sendHello(name) {
-    this.sendMessage('hello', { name })
+    this.sendMessage('hello', { name });
   }
 
   sendTextMessage(message) {
-    this.sendMessage('text-message', { message })
+    this.sendMessage('text-message', { message });
   }
 
   sendMessage(type, data) {
-    this.socket.send(JSON.stringify({ type, data }))
+    this.socket.send(JSON.stringify({ type, data }));
   }
-}  
+}

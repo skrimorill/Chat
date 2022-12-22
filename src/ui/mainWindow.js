@@ -4,11 +4,10 @@ export default class MainWindow {
   }
 
   show() {
-    this.element.classList.remove('hidden')
+    this.element.classList.remove('hidden');
   }
 
   hide() {
-    this.element.classList.add('hidden')
+    this.element.classList.add('hidden');
   }
 }
-
